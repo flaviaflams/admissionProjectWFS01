@@ -21,6 +21,19 @@
         text-align: center;
     }
 </style>
+<script>
+    function validateForm() {
+        var x = document.forms["formulario"]["email"].value;
+        if (x == "") {
+            alert("Campo vazio! Preencha com seu email.");
+        return false;
+        }
+        else{
+            alert("O email " + x + " foi enviado.");
+        return true;
+        }
+    }
+</script>
 </head>
 <body>
     <h1>Projeto Future4</h1>
@@ -52,8 +65,8 @@
         <div class="box"> Javascript</div></p>
     </section>
     <footer>
-        <form>
-            <input type="text" value="Coloque aqui o seu email">
+        <form name="formulario" onsubmit="return validateForm()">
+            <input type="text" name="email" value="Coloque aqui o seu email">
             <input type="submit"; style="background-color: #ff471a"; value="Enviar" >
     </footer>
 </body>
