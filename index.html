@@ -28,10 +28,14 @@
             alert("Campo vazio! Preencha com seu email.");
         return false;
         }
-        else{
+        else if (x.indexOf("@") < 1){
+                alert("Email inválido");
+        return false
+        }
+        else {
             alert("O email " + x + " foi enviado.");
         return true;
-        }
+        }s
     }
 </script>
 </head>
