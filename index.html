@@ -2,23 +2,36 @@
 <html>
 <head> <title>Projeto Future4</title>
 <style>
-    *{box-sizing: border-box}
-    header{
-        background-color: #6600ff;
-        padding: 30px;
-        font-size: 30px;
+    * {box-sizing: border-box;}
+    body {
+          margin: 0;
+          overflow: auto;
+    }
+    .area1{
+        background-color: blueviolet;
         color: white;
-    }
-    section{
-        background-color: #ff471a;
         padding: 100px;
-        color: #ff471a;
-        top:50%;
+        font-size: 30px;
     }
-    footer {
-        background-color: rgb(202, 199, 199);
-        padding: 50px;
+    .area2{
+        background-color: orangered;
+        padding: 80px;
+    }
+    .area3{
+        background-color: lightgrey;
+        padding: 40px;
         text-align: center;
+    }
+    .box{
+        display: inline-block;
+        height: 20px;
+        background-color: white;
+        width: 30%;
+        border: 2px solid orangered;
+        padding: 40px;
+        margin: 10px;
+        text-align: center;
+        color: orangered
     }
 </style>
 <script>
@@ -29,49 +42,33 @@
         return false;
         }
         else if (x.indexOf("@") < 1){
-                alert("Email inválido");
+            alert("Email inválido");
         return false
         }
         else {
             alert("O email " + x + " foi enviado.");
+            document.write("Bem vindo "+ x +"!");
         return true;
-        }s
+        }
     }
-</script>
+    </script>
 </head>
 <body>
-    <h1>Projeto Future4</h1>
-    <p>Esse é o projeto de seleção na Future4.</p>
-    <p>Aluna Flávia Miranda</p>
-    <header>
-        <h2 style="text-align: center" > Projeto seletivo Future4 </h2><br>
+    <div class="area1">
+        <h1 style="text-align: center" > Projeto seletivo Future4 </h1><br>
         <p style="text-align: center"> <img src="future4.jpg" alt="Logo Future4"  width="500" height="250"></p>
-        <p style="text-align: right">Turma Web Full Stack 01</p> 
-    </header>
-    <section>
-        <style>
-            .box {
-                    float: left;
-                    width: 30%;
-                    height: 100px;
-                    padding: 33px;
-                    margin-top: -50px;
-                } 
-            div {
-                    background-color: white;
-                    border: 5px solid #ff471a;
-                    margin: 20px;
-                    text-align: center;
-                }   
-        </style>
-        <p></p><div class="box"> HTML</div>
-        <div class="box"> CSS</div>
-        <div class="box"> Javascript</div></p>
-    </section>
-    <footer>
+        <p style="text-align: right">Turma Web Full Stack 01</p>
+    </div>
+    <div class="area2">
+        <p class="box">HTML</p>
+        <p class="box">CSS</p>
+        <p class="box">Javascript</p>
+    </div>
+    <div class="area3">
         <form name="formulario" onsubmit="return validateForm()">
-            <input type="text" name="email" value="Coloque aqui o seu email">
+            <input type="text" name="email" placeholder="Coloque aqui o seu email">
             <input type="submit"; style="background-color: #ff471a"; value="Enviar" >
-    </footer>
+        </form>
+    </div>
 </body>
 </html>
